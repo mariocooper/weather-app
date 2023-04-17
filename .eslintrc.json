@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2020": true
+        "es2020": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -23,5 +24,17 @@
         "react"
     ],
     "rules": {
-    }
+        "quotes": [0],
+        "react/prop-types": [0],
+        "react/jsx-props-no-spreading": [0],
+        "import/order": [1],
+        "no-unused-vars": [1],
+        "prettier/prettier": [1, { "endOfLine": "auto" }],
+        "react/jsx-filename-extension": [
+          1,
+          {
+            "extensions": [".js", ".jsx"]
+          }
+        ]
+      }
 }
