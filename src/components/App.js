@@ -4,7 +4,11 @@ import LocationDetails from "./LocationDetails";
 
 function App({ location }) {
   const { city, country } = location;
-  return <LocationDetails city={city} country={country} />;
+  return (
+    <div className="App">
+      <LocationDetails city={city} country={country} />;
+    </div>
+  );
 }
 
 export default App;
