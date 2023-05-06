@@ -4,9 +4,10 @@ import LocationDetails from "./LocationDetails";
 
 function App({ location }) {
   const { city, country } = location;
+
   return (
-    <div className="App">
-      <LocationDetails city={city} country={country} />;
+    <div className="app">
+      <LocationDetails city={city} country={country} />
     </div>
   );
 }
