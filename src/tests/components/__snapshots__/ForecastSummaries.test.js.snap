@@ -6,12 +6,13 @@ exports[`ForecastSummaries renders correctly 1`] = `
     class="forecast-summaries"
   >
     <div
+      class="forecast-summary"
       data-testid="forecast-summary"
     >
       <div
         class="forecast-summary__date"
       >
-        1111111
+        Thu Jan 01 1970
       </div>
       <div
         class="forecast-summary__description"
@@ -20,27 +21,26 @@ exports[`ForecastSummaries renders correctly 1`] = `
       </div>
       <div
         class="forecast-summary__icon"
+        data-testid="forecast-icon"
       >
-        stubIcon1
+        <img
+          alt="Forecast Icon"
+        />
       </div>
       <div
         class="forecast-summary__temperature"
       >
         22°C
       </div>
-      <div
-        class="forecast-summary__description"
-      >
-        Stub description 1
-      </div>
     </div>
     <div
+      class="forecast-summary"
       data-testid="forecast-summary"
     >
       <div
         class="forecast-summary__date"
       >
-        2222222
+        Thu Jan 01 1970
       </div>
       <div
         class="forecast-summary__description"
@@ -49,18 +49,16 @@ exports[`ForecastSummaries renders correctly 1`] = `
       </div>
       <div
         class="forecast-summary__icon"
+        data-testid="forecast-icon"
       >
-        stubIcon2
+        <img
+          alt="Forecast Icon"
+        />
       </div>
       <div
         class="forecast-summary__temperature"
       >
         24°C
-      </div>
-      <div
-        class="forecast-summary__description"
-      >
-        Stub description 2
       </div>
     </div>
   </div>
