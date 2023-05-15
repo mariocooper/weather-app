@@ -3,7 +3,6 @@
     justify-content: space-between;
 }
 
-.forecast-icon {
-    height: 200px;
-    width: 50%;
+.forecast-summary__icon {
+    height: 100px;
 }
