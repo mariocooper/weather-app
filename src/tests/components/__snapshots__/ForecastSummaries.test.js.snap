@@ -32,6 +32,11 @@ exports[`ForecastSummaries renders correctly 1`] = `
       >
         22°C
       </div>
+      <button
+        type="button"
+      >
+        More Details
+      </button>
     </div>
     <div
       class="forecast-summary"
@@ -60,6 +65,11 @@ exports[`ForecastSummaries renders correctly 1`] = `
       >
         24°C
       </div>
+      <button
+        type="button"
+      >
+        More Details
+      </button>
     </div>
   </div>
 </DocumentFragment>
