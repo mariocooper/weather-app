@@ -13,12 +13,12 @@ function ForecastDetails({ forecast }) {
       </div>
       <div className="forecast-details__icon">{ForecastSummary.icon}</div>
       <div className="forecast-details__temperature-max">
-        {temperature.max}&deg;C
+        High: {temperature.max}&deg;C
       </div>
       <div className="forecast-details__temperature-min">
-        {temperature.min}&deg;C
+        Low: {temperature.min}&deg;C
       </div>
-      <div className="forecast-details__wind-speed">{wind.speed}</div>
+      <div className="forecast-details__wind-speed">{wind.speed}mph</div>
       <div className="forecast-details__wind-direction">{wind.direction}</div>
       <div className="forecast-details__humidity">{humidity}</div>
     </div>
