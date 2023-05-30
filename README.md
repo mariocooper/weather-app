@@ -1,3 +1,19 @@
+# 5-Day Weather Forecast App
+
+## This is a simple 5-day weather forecast app specifically designed for cities and towns in the United Kingdom. It provides users with accurate and up-to-date weather information for their desired location within the UK.
+
+### Features
+
+Location Search: Users can search for their desired UK town or city and a 5-day weather forecast will render for that specific location. The app supports various locations across the United Kingdom, ensuring that users can find weather forecasts for their specific area of interest.
+
+5-Day Forecast: The app displays a 5-day weather forecast for the selected UK location. Users can easily access information about temperature, humidity, wind speed, wind direction and weather conditions (e.g., sunny, cloudy, rainy) for each day.
+
+User-Friendly Interface: The app offers a clean and user-friendly interface, making it easy for users to navigate and access the desired weather information quickly, making it effortless to retrieve the weather forecasts they need.
+
+Reliable Data Sources: The weather data used in this app is sourced from the Open Weather Map API (https://openweathermap.org/).
+
+![Weather App](https://github.com/mariocooper/weather-app/blob/master/src/Weather%20App.png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
