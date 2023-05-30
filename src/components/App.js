@@ -5,6 +5,7 @@ import getForecast from "../requests/getForecast";
 import SearchForm from "./SearchForm";
 import ForecastDetails from "./ForecastDetails";
 import "../styles/App.css";
+import background from "../UK.jpg";
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(0);
@@ -37,26 +38,39 @@ function App() {
     getForecast(setSelectedDate, setForecasts, setLocation);
   }, []);
   return (
-    <div className="weather-app">
-      <LocationDetails
-        city={location.city}
-        country={location.country}
-        errorMessage={errorMessage}
-      />
-      <SearchForm
-        searchText={searchText}
-        setSearchText={setSearchText}
-        onSubmit={handleCitySearch}
-      />
-      {!errorMessage && (
-        <>
-          <ForecastSummaries
-            forecasts={forecasts}
-            onForecastSelect={handleForecastSelect}
-          />
-          {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
-        </>
-      )}
+    <div
+      className="background-image"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="weather-app">
+        <h1>Weather Forecast</h1>
+        <LocationDetails
+          city={location.city}
+          country={location.country}
+          errorMessage={errorMessage}
+        />
+        <SearchForm
+          searchText={searchText}
+          setSearchText={setSearchText}
+          onSubmit={handleCitySearch}
+        />
+        <br />
+        {!errorMessage && (
+          <>
+            <ForecastSummaries
+              forecasts={forecasts}
+              onForecastSelect={handleForecastSelect}
+            />
+            {selectedForecast && (
+              <ForecastDetails forecast={selectedForecast} />
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 }
