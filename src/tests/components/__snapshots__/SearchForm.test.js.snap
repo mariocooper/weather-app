@@ -6,8 +6,9 @@ exports[`SearchForm renders correctly 1`] = `
     class="search-form"
   >
     <input
+      placeholder="Search for a UK town or city"
       type="text"
-      value="Newcastle"
+      value="Cornwall"
     />
     <button
       type="submit"
