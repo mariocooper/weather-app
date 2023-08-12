@@ -12,7 +12,7 @@ User-Friendly Interface: The app offers a clean and user-friendly interface, mak
 
 Reliable Data Sources: The weather data used in this app is sourced from the Open Weather Map API (https://openweathermap.org/).
 
-![Weather App](https://github.com/mariocooper/weather-app/blob/master/src/Weather%20App.png?raw=true)
+![Weather App](https://github.com/mariocooper/react-weather-app/blob/master/src/Weather%20%20App.png)
 
 # Getting Started with Create React App
 
