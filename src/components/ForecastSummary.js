@@ -2,9 +2,13 @@ import React from "react";
 import iconData from "../data/iconData.json";
 
 function ForecastSummary(props) {
-  const { date, description, icon, temperature, onSelect } = props;
-  const weatherCode = `${icon.slice(0, 1)}00`;
+  const { date, description, icon, temperature, onSelect, isLoading } = props;
+  const weatherCode = icon > 800 ? "800x" : `${icon.slice(0, 1)}00`;
   const formattedDate = new Date(date).toDateString();
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
