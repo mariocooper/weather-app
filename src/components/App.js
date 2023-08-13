@@ -11,11 +11,12 @@ function App() {
   const [selectedDate, setSelectedDate] = useState(0);
   const [forecasts, setForecasts] = useState([]);
   const [location, setLocation] = useState({
-    city: "",
-    country: "",
+    city: "Manchester",
+    country: "GB",
   });
   const [searchText, setSearchText] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(true); 
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
@@ -26,7 +27,8 @@ function App() {
       setForecasts,
       setLocation,
       searchText,
-      setErrorMessage
+      setErrorMessage,
+      setIsLoading
     );
   };
 
@@ -35,9 +37,12 @@ function App() {
   };
 
   useEffect(() => {
-    getForecast(setSelectedDate, setForecasts, setLocation);
+    getForecast(setSelectedDate, setForecasts, setLocation, "", setErrorMessage, setIsLoading);
   }, []);
+  console.log(isLoading)
+
   return (
+
     <div
       className="background-image"
       style={{
@@ -48,29 +53,41 @@ function App() {
     >
       <div className="weather-app">
         <h1>Weather Forecast</h1>
-        <LocationDetails
-          city={location.city}
-          country={location.country}
-          errorMessage={errorMessage}
-        />
         <SearchForm
-          searchText={searchText}
-          setSearchText={setSearchText}
-          onSubmit={handleCitySearch}
-        />
-        <br />
-        {!errorMessage && (
-          <>
-            <ForecastSummaries
-              forecasts={forecasts}
-              onForecastSelect={handleForecastSelect}
-            />
-            {selectedForecast && (
-              <ForecastDetails forecast={selectedForecast} />
+                        searchText={searchText}
+                        setSearchText={setSearchText}
+                        onSubmit={handleCitySearch}
+                    />
+        {isLoading && !errorMessage ?  
+                  <h2>Loading forecast for {searchText || location.city}</h2>
+        : null }
+
+         {errorMessage && (
+                <div className="error-message">
+                    <h2>{errorMessage}</h2>
+                </div>
             )}
-          </>
-        )}
-      </div>
+            
+            {!isLoading && !errorMessage && (
+                <>
+                    <LocationDetails
+                        city={location.city}
+                        country={location.country}
+                    />
+                    
+                    
+                    <br />
+
+                    <ForecastSummaries
+                        forecasts={forecasts}
+                        onForecastSelect={handleForecastSelect}
+                    />
+                    {selectedForecast && (
+                        <ForecastDetails forecast={selectedForecast} />
+                    )}
+                </>
+            )}
+        </div>
     </div>
   );
 }
