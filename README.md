@@ -14,6 +14,8 @@ Reliable Data Sources: The weather data used in this app is sourced from the Ope
 
 ![Weather App](https://github.com/mariocooper/react-weather-app/blob/master/src/Weather%20%20App.png)
 
+Please be aware that when starting up this application, there will be a delay whilst a connection is established with the API. This delay will usually last about 1 minute.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
