@@ -15,11 +15,6 @@ exports[`ForecastSummaries renders correctly 1`] = `
         Thu Jan 01 1970
       </div>
       <div
-        class="forecast-summary__description"
-      >
-        Stub description 1
-      </div>
-      <div
         class="forecast-summary__icon"
         data-testid="forecast-icon"
       >
@@ -28,10 +23,16 @@ exports[`ForecastSummaries renders correctly 1`] = `
         />
       </div>
       <div
+        class="forecast-summary__description"
+      >
+        Stub description 1
+      </div>
+      <div
         class="forecast-summary__temperature"
       >
         22°C
       </div>
+      <br />
       <button
         type="button"
       >
@@ -48,11 +49,6 @@ exports[`ForecastSummaries renders correctly 1`] = `
         Thu Jan 01 1970
       </div>
       <div
-        class="forecast-summary__description"
-      >
-        Stub description 2
-      </div>
-      <div
         class="forecast-summary__icon"
         data-testid="forecast-icon"
       >
@@ -61,10 +57,16 @@ exports[`ForecastSummaries renders correctly 1`] = `
         />
       </div>
       <div
+        class="forecast-summary__description"
+      >
+        Stub description 2
+      </div>
+      <div
         class="forecast-summary__temperature"
       >
         24°C
       </div>
+      <br />
       <button
         type="button"
       >

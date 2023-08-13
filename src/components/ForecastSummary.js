@@ -3,7 +3,7 @@ import iconData from "../data/iconData.json";
 
 function ForecastSummary(props) {
   const { date, description, icon, temperature, onSelect } = props;
-  const weatherCode = icon > 800 ? "800x" : `${icon.slice(0, 1)}00`;
+  const weatherCode = icon > 800 ? "80x" : `${icon.slice(0, 1)}00`;
   const formattedDate = new Date(date).toDateString();
 
   return (
