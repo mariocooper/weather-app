@@ -11,6 +11,7 @@ const getForecast = (
 ) => {
   let endpoint = "https://cmd-shift-weather-app.onrender.com/forecast";
   setIsLoading(true);
+  setErrorMessage(false);
 
   if (searchText) {
     endpoint += `?city=${searchText}`;
@@ -21,8 +22,6 @@ const getForecast = (
       axios
         .get(endpoint)
         .then((response) => {
-          console.log("Request succeeded");
-
           setSelectedDate(response.data.forecasts[0].date);
           setForecasts(response.data.forecasts);
           setLocation(response.data.location);

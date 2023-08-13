@@ -53,40 +53,41 @@ function App() {
     >
       <div className="weather-app">
         <h1>Weather Forecast</h1>
-        
-        {isLoading ? 
-                  <h2>Loading forecast for {searchText || location.city}</h2>
-        :
-        <>
-          <LocationDetails
-          city={location.city}
-          country={location.country}
-          errorMessage={errorMessage}
-        />
-        
         <SearchForm
-          searchText={searchText}
-          setSearchText={setSearchText}
-          onSubmit={handleCitySearch}
-        />
-        <br />
+                        searchText={searchText}
+                        setSearchText={setSearchText}
+                        onSubmit={handleCitySearch}
+                    />
+        {isLoading && !errorMessage ?  
+                  <h2>Loading forecast for {searchText || location.city}</h2>
+        : null }
 
-        {!errorMessage &&  (
-          <>
-          
-            <ForecastSummaries
-              forecasts={forecasts}
-              onForecastSelect={handleForecastSelect}
-              isLoading={isLoading}
-            />
-            {selectedForecast && (
-              <ForecastDetails forecast={selectedForecast} />
+         {errorMessage && (
+                <div className="error-message">
+                    <h2>{errorMessage}</h2>
+                </div>
             )}
-          </>
-        )}
-             </>
-}       
-      </div>
+            
+            {!isLoading && !errorMessage && (
+                <>
+                    <LocationDetails
+                        city={location.city}
+                        country={location.country}
+                    />
+                    
+                    
+                    <br />
+
+                    <ForecastSummaries
+                        forecasts={forecasts}
+                        onForecastSelect={handleForecastSelect}
+                    />
+                    {selectedForecast && (
+                        <ForecastDetails forecast={selectedForecast} />
+                    )}
+                </>
+            )}
+        </div>
     </div>
   );
 }
